@@ -1,0 +1,564 @@
+{% extends "client/base.html" %}
+{% load crispy_forms_tags %}
+{% block menu_active %}active{% endblock %}
+{% load static %}
+
+{% block content %}
+     <!-- **** Menu items start **** -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <section id="our_menu" class="pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page_title text-center mb-4">
+            <h1>our menu</h1>
+
+            <div class="single_line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <ul class="nav nav-tabs menu_tab mb-4" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="breakfast-tab" data-toggle="tab" href="#breakfast" role="tab">Coffee</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="lunch-tab" data-toggle="tab" href="#lunch" role="tab">Snacks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="dinner-tab" data-toggle="tab" href="#dinner" role="tab">Drinks</a>
+          </li>
+        </ul>
+        <br>
+        
+          </div>
+           <!-- <form class="example" style="align-items: center;" action="action_page.php">
+  
+             <input type="text" placeholder="Search.." name="search">
+            <button 
+              type="submit"><i class="fa fa-search"></i></button>
+        </form>  -->
+
+      <div class="row">
+       
+        <div class="tab-content col-lg-12" id="myTabContent">
+          <div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29mZmVlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="burger">
+                  <div class="menu_content">
+                    <h4>AMERICANO   <span>$24 </span></h4>
+                    
+                      <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+              <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+              
+                <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+  
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+  
+</button>
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29mZmVlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="black coffee">
+                  <div class="menu_content">
+                    <h4>DOUBLE ESPRESSO<span>$20 </span></h4>
+                    <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                             <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+  
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+  
+</button>
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1512151004335-d5b6c2ff7e12?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8Y29mZmVlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="fried rice">
+                  <div class="menu_content">
+                    <h4>CAPPUCCINO  <span>$45</h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                             <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+  
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+  
+</button>
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1459755486867-b55449bb39ff?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvZmZlZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="meat">
+                  <div class="menu_content">
+                    <h4>ESPRESSO <span>$24 </span> </h4>
+                    <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                             <button class="addtocart">
+                            <div class="pretext">
+                            <i class="fas fa-cart-plus"></i> ADD TO CART
+                                </div>
+  
+                        <div class="pretext done">
+                          <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+                          </div>
+  
+                          </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Y29mZmVlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="burger">
+                  <div class="menu_content">
+                    <h4>CAFFÈ LATTE <span>$24 </span></h4>
+                    <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjB8fGNvZmZlZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="black coffee">
+                  <div class="menu_content">
+                    <h4>ESPRESSO CON PANNA <span>$20 </span></h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1501747315-124a0eaca060?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjR8fGNvZmZlZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="fried rice">
+                  <div class="menu_content">
+                    <h4>BLACK COFFEE  <span>$45 </span> </h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjh8fGNvZmZlZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="meat">
+                  <div class="menu_content">
+                    <h4>FLAT WHITE  <span>$24 </span></h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="lunch" role="tabpanel" aria-labelledby="lunch-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZmFzdCUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="pizza">
+                  <div class="menu_content">
+                    <h4>BURGER <span>$35 </span> </h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1539451652256-f485173cab9b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fGZhc3QlMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="salad">
+                  <div class="menu_content">
+                    <h4>PIZZA <span>$20</span></h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1598679253544-2c97992403ea?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fGZhc3QlMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="green tea">
+                  <div class="menu_content">
+                    <h4>FRENCH FRIES <span>$15</span> </h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1566478989037-eec170784d0b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8anVuayUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="meat">
+                  <div class="menu_content">
+                    <h4>CHIPS <span>$24</span></h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1602192103300-47e66756152e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="burger">
+                  <div class="menu_content">
+                    <h4>EGG ROLL  <span>$24 </span> </h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fGp1bmslMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="black coffee">
+                  <div class="menu_content">
+                    <h4>BABY CORN <span>$20</span> </h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1560971017-ae4b60d62354?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjN8fGp1bmslMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="fried rice">
+                  <div class="menu_content">
+                    <h4>EGG BURGER <span>$45 </span> </h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1543340904-991f3751a30f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzB8fGp1bmslMjBmb29kfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="meat">
+                  <div class="menu_content">
+                    <h4>SPECIAL SNACK  <span>$24 </span> </h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="dinner" role="tabpanel" aria-labelledby="dinner-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1462887749044-b47cb05b83b8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGRyaW5rc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="burger">
+                  <div class="menu_content">
+                    <h4>FRUIT JUICE  <span>$24</span></h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8ZHJpbmtzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="black coffee">
+                  <div class="menu_content">
+                    <h4>LIME JUICE <span>$20</span> </h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1444728399417-08d2aa39e6f4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fGRyaW5rc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="fried rice">
+                  <div class="menu_content">
+                    <h4>ORANGE JUICE  <span>$45 ></span> </h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1555940726-1c297abcc1f1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTB8fGRyaW5rc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="meat">
+                  <div class="menu_content">
+                    <h4>MANGO SHAKE  <span>$24</span> </h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1571407002713-5d78b8dc095e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTl8fGRyaW5rc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="burger">
+                  <div class="menu_content">
+                    <h4>APPLE JUICE <span>$24 </span></h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1560508179-b2c9a3f8e92b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjN8fGRyaW5rc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="black coffee">
+                  <div class="menu_content">
+                    <h4>STRAWBERRY JUICE <span>$20</span> </h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjZ8fGRyaW5rc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="fried rice">
+                  <div class="menu_content">
+                    <h4>MILK SHAKE <span>$45</span> </h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+                <div class="single_menu">
+                  <img src="https://images.unsplash.com/photo-1546497247-c8755e0deb50?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nzl8fGRyaW5rc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="meat">
+                  <div class="menu_content">
+                    <h4>CHOCO SHAKE  <span>$24 </span> </h4>
+                     <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                    <button class="addtocart">
+  <div class="pretext">
+    <i class="fas fa-cart-plus"></i> ADD TO CART
+  </div>
+
+  <div class="pretext done">
+    <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+  </div>
+
+</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+     <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+
+            });
+        });
+
+    </script>
+    <script>
+      const button = document.querySelector(".addtocart");
+const done = document.querySelector(".done");
+console.log(button);
+let added = false;
+button.addEventListener('click',()=>{
+  if(added){
+    done.style.transform = "translate(-110%) skew(-40deg)";
+    added = false;
+  }
+  else{
+    done.style.transform = "translate(0px)";
+    added = true;
+  }
+
+});
+
+    </script>
+    <!-- **** Menu items ends ***** -->
+    {% endblock %}

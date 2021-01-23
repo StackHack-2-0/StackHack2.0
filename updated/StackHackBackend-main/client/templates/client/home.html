@@ -1,0 +1,222 @@
+{% extends "client/base.html" %}
+{% load crispy_forms_tags %}
+{% block home_active %}active{% endblock %}
+{% load static %}
+
+{% block content %}
+    <!-- ***** Main Banner Area Start ***** -->
+      <div id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                      <div class="flip-container">
+                        <div class="flipper" id="flipper">
+                            <div class="front">
+                                 <h2 class="title">The Cafe Point</h2>
+                                  <p>The best coffee experience</p>
+                                  <br>
+                                  <br>
+                                  {% if user.is_authenticated %}
+                                  <a class="flipbutton" id="loginButton" href="{% url 'client:menu' %}">Delicious Food Awaiting</br>Order Now</a>
+                                  {% else %}
+                                  <a class="flipbutton" id="loginButton" href="{% url 'client:login' %}">Register/Login</a>
+                                  {% endif %}
+                            </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="main-banner header-text">
+                        <div class="Modern-Slider">
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="{% static '/client/images/slide-01.jpg' %}" alt="">
+                            </div>
+                          </div>
+                          <!-- // Item -->
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="{% static '/client/images/slide-02.jpg' %}" alt="">
+                            </div>
+                          </div>
+                          <!-- // Item -->
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="{% static '/client/images/slide-03.jpg' %}" alt="">
+                            </div>
+                          </div>
+                          <!-- // Item -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** About Area Starts ***** -->
+    <section class="section" id="about">
+      <div class="section-heading">
+                            <h6>About Us</h6>
+                            <h2>We Leave A Delicious Memory For You</h2>
+                        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="left-text-content">
+
+                        <p>The Caffee Point is one of the best restaurant . You can visit and feel fresh when you visit this caffee . Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ <br><br>Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus.Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, </p>
+                        <img src="{% static '/client/images/cafe1.jpg ' %}" style="height:280px">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="right-content">
+                        <div class="thumb">
+                            <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
+                            <img src="{% static '/client/images/about-video-bg.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ***** About Area Ends ***** -->
+
+<!--popular dishes-->
+    <!-- ***** Chefs Area Starts ***** -->
+    <section class="section" id="chefs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 offset-lg-4 text-center">
+                    <div class="section-heading">
+                        <h6>Our Chefs</h6>
+                        <h2>We offer the best</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="chef-item">
+                        <div class="thumb">
+                            <div class="overlay"></div>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                            <img src="{% static 'client/images/chefs-01.jpg' %}" alt="Chef #1">
+                        </div>
+                        <div class="down-content">
+                            <h4>Randy Walker</h4>
+                            <span>Pastry Chef</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="chef-item">
+                        <div class="thumb">
+                            <div class="overlay"></div>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            </ul>
+                            <img src="{% static 'client/images/chefs-02.jpg' %}" alt="Chef #2">
+                        </div>
+                        <div class="down-content">
+                            <h4>David Martin</h4>
+                            <span>Cookie Chef</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="chef-item">
+                        <div class="thumb">
+                            <div class="overlay"></div>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google"></i></a></li>
+                            </ul>
+                            <img src="{% static 'client/images/chefs-03.jpg' %}" alt="Chef #3">
+                        </div>
+                        <div class="down-content">
+                            <h4>Peter Perkson</h4>
+                            <span>Pancake Chef</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ***** Chefs Area Ends ***** -->
+
+<!-- customer review -->
+     <div class="row testro">
+                <div class="col-lg-4 offset-lg-4 text-center">
+                    <div style="margin-top:30px;" class="section-heading">
+                        <h5>Customer Reviews</h5>
+                        <h2>We offer the best ingredients for you</h2>
+                    </div>
+                </div>
+    </div>
+
+<section id="testim" class="testim">
+
+<!-- <div class="testim-cover"> -->
+            <div class="wrap">
+
+                <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+                <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+                <ul id="testim-dots" class="dots">
+                    <li class="dot active"></li><!--
+                    --><li class="dot"></li><!--
+                    --><li class="dot"></li><!--
+                    --><li class="dot"></li><!--
+                    --><li class="dot"></li>
+                </ul>
+                <div id="testim-content" class="cont">
+
+                    <div class="active">
+                        <div class="img"><img src="https://image.ibb.co/hgy1M7/5a6f718346a28820008b4611_750_562.jpg" alt=""></div>
+                        <h2>Lorem P. Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+
+                    <div>
+                        <div class="img"><img src="https://image.ibb.co/cNP817/pexels_photo_220453.jpg" alt=""></div>
+                        <h2>Mr. Lorem Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+
+                    <div>
+                        <div class="img"><img src="https://image.ibb.co/iN3qES/pexels_photo_324658.jpg" alt=""></div>
+                        <h2>Lorem Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+
+                    <div>
+                        <div class="img"><img src="https://image.ibb.co/kL6AES/Top_SA_Nicky_Oppenheimer.jpg" alt=""></div>
+                        <h2>Lorem De Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+
+                    <div>
+                        <div class="img"><img src="https://image.ibb.co/gUPag7/image.jpg" alt=""></div>
+                        <h2>Ms. Lorem R. Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    </div>
+
+                </div>
+
+            </div>
+<!--         </div> -->
+    </section>
+
+<script src="https://use.fontawesome.com/1744f3f671.js"></script>
+    <!-- customer review -->
+{% endblock %}
